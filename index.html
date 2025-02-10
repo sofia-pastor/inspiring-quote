@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Tangerine:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+
+    <style>
+      body {
+        background-color: rgb(210, 210, 210);
+        margin: 0;
+      }
+
+      .hero {
+        padding: 120px 60px;
+        background-image: linear-gradient(
+            to bottom,
+            rgba(10, 2, 43, 0.8),
+            rgba(0, 0, 0, 0.8)
+          ),
+          url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/157/172/original/output_%281%29.png?1739204815);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      h1 {
+        min-height: 160px;
+        text-align: center;
+        font-family: "Tangerine", serif;
+        font-weight: 700;
+        font-size: 72px;
+        color: rgba(230, 230, 230);
+        text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+      }
+
+      h3 {
+        font-family: "Special Elite", serif;
+        text-align: end;
+        font-size: 22px;
+        font-weight: 400;
+        margin: 50px 15px;
+        color: rgba(230, 230, 230, 0.8);
+        text-shadow: 3px 3px 10px rgba(120, 120, 120, 0.7);
+      }
+
+      .links-container {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 280px;
+      }
+
+      .links {
+        font-size: 16px;
+      }
+
+      a {
+        color: rgba(247, 225, 193, 0.6);
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="hero">
+      <div class="hero-main">
+        <h1 id="quote"></h1>
+        <h3>Friedrich Nietzsche</h3>
+      </div>
+      <div class="links-container">
+        <div><a href="/index.html">See more quotes</a></div>
+        <div><a href="/index.html" class="author">About the Author</a></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>About the author</h2>
+      <p>
+        Friedrich Wilhelm Nietzsche (Röcken, Reino da Prússia, 15 de outubro de
+        1844 - Weimar, Império Alemão, 25 de agosto de 1900) foi um filósofo,
+        filólogo, crítico cultural, poeta e compositor prussiano do século XIX,
+        nascido na atual Alemanha. Escreveu vários textos criticando a religião,
+        a moral, a cultura contemporânea, a filosofia e a ciência, exibindo
+        certa predileção por metáfora, ironia e aforismo. É famoso por sua
+        crítica à religião, em especial o cristianismo.
+      </p>
+    </div>
+    <script>
+      let h2 = document.querySelector("#quote");
+      let typewriter = new Typewriter(h2, {
+        autoStart: true,
+        delay: 80,
+        cursor: null,
+      });
+
+      typewriter
+        .typeString(
+          "“And those who were seen dancing were thought to be insane by those who could not hear the music.”"
+        )
+        .pauseFor(1000) // Pause at the end
+        .start();
+    </script>
+  </body>
+</html>
