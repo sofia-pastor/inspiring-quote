@@ -6,20 +6,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Tangerine:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Elite&family=Tangerine:wght@400;700&display=swap"
       rel="stylesheet"
     />
 
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 
     <style>
+      html {
+        scroll-behavior: smooth;
+      }
       body {
-        background-color: rgb(210, 210, 210);
+        background-color: rgb(220, 220, 220);
         margin: 0;
+        font-family: "Roboto", serif;
+        line-height: 1.5;
       }
 
       .hero {
-        padding: 120px 60px;
+        padding: 60px;
         background-image: linear-gradient(
             to bottom,
             rgba(10, 2, 43, 0.8),
@@ -32,13 +37,19 @@
       }
 
       h1 {
-        min-height: 160px;
+        min-height: 250px;
+        margin-top: 100px;
         text-align: center;
         font-family: "Tangerine", serif;
         font-weight: 700;
         font-size: 72px;
         color: rgba(230, 230, 230);
         text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+      }
+
+      h1:hover {
+        text-shadow: 5px 5px 15px rgba(255, 255, 255, 0.5);
+        transition: text-shadow 500ms ease-in-out;
       }
 
       h3 {
@@ -54,46 +65,169 @@
       .links-container {
         display: flex;
         justify-content: space-evenly;
-        margin-top: 280px;
-      }
-
-      .links {
-        font-size: 16px;
+        margin-top: 180px;
       }
 
       a {
+        text-decoration: none;
+      }
+
+      .hero a {
         color: rgba(247, 225, 193, 0.6);
       }
+
+      section {
+        margin: 80px 100px;
+      }
+
+      section h2 {
+        font-size: 28px;
+        text-align: start;
+        margin: 30px 0;
+      }
+
+      section p {
+        text-align: justify;
+        margin: 0 60px;
+        line-height: 2;
+      }
+
+      section .link {
+        text-align: end;
+        margin: 30px 60px;
+      }
+
+      section a {
+        color: rgba(10, 2, 43, 0.6);
+      }
+
+      a:hover {
+        color: rgba(157, 94, 0, 0.7);
+        text-decoration: underline;
+      }
+
+      section ul {
+        margin: 60px 40px;
+        text-align: center;
+        list-style: none;
+        font-size: 20px;
+        font-family: "Special Elite", serif;
+      }
+
+      section li {
+        background-color: rgba(247, 225, 193, 0.6);
+        padding: 40px;
+        margin: 50px 0;
+        border: 2px solid rgba(10, 2, 43, 0.6);
+        border-radius: 10px;
+        box-shadow: 6px 4px 10px rgba(10, 2, 43, 0.5);
+      }
+
+      @media (max-width: 800px) {
+        .hero {
+          padding: 50px;
+        }
+
+        h1 {
+          font-size: 60px;
+          min-height: 500px;
+          margin: 20px 0;
+        }
+
+        h3 {
+          font-size: 20px;
+        }
+
+        section {
+          margin: 80px 20px;
+        }
+
+        section p {
+          margin: 0 10px;
+        }
+        section .link {
+          margin-right: 12px;
+          margin-bottom: 0;
+        }
+
+        section ul {
+          margin: 0 10px;
+          padding: 0;
+        }
+      }
     </style>
-    <title>Document</title>
+    <title>Nietzsche Quotes</title>
   </head>
+
   <body>
     <div class="hero">
-      <div class="hero-main">
-        <h1 id="quote"></h1>
-        <h3>Friedrich Nietzsche</h3>
-      </div>
-      <div class="links-container">
-        <div><a href="/index.html">See more quotes</a></div>
-        <div><a href="/index.html" class="author">About the Author</a></div>
+      <h1 id="quote"></h1>
+      <h3>Friedrich Nietzsche</h3>
+
+      <div class="links-container" id="links">
+        <div><a href="#quotes">See more quotes</a></div>
+        <div>
+          <a href="#author" class="author">About the Author</a>
+        </div>
       </div>
     </div>
 
-    <div class="container">
-      <h2>About the author</h2>
+    <section>
+      <h2 id="author">About the author</h2>
       <p>
-        Friedrich Wilhelm Nietzsche (Röcken, Reino da Prússia, 15 de outubro de
-        1844 - Weimar, Império Alemão, 25 de agosto de 1900) foi um filósofo,
-        filólogo, crítico cultural, poeta e compositor prussiano do século XIX,
-        nascido na atual Alemanha. Escreveu vários textos criticando a religião,
-        a moral, a cultura contemporânea, a filosofia e a ciência, exibindo
-        certa predileção por metáfora, ironia e aforismo. É famoso por sua
-        crítica à religião, em especial o cristianismo.
+        Friedrich Wilhelm Nietzsche (15 October 1844 - 25 August 1900) was a
+        German philosopher, cultural critic, composer, poet, writer, and
+        philologist whose work has exerted a profound influence on modern
+        intellectual history. His critiques of contemporary culture, religion,
+        and philosophy centered on a basic question regarding the foundation of
+        values and morality.
       </p>
-    </div>
+      <div class="link">
+        <a href="https://pt.wikipedia.org/wiki/Friedrich_Nietzsche"
+          >Learn more on Wikipedia</a
+        >
+      </div>
+    </section>
+    <section>
+      <h2 id="quotes">Nietzsche's Quotes</h2>
+      <ul>
+        <li>“Without music, life would be a mistake.”</li>
+        <li>
+          “To Live Is to Suffer, to Survive Is to Find Some Meaning in the
+          Suffering.”
+        </li>
+        <li>“That Which Does Not Kill Us Makes Us Stronger.”</li>
+        <li>
+          “Whoever fights monsters should see to it that in the process he does
+          not become a monster. And if you gaze long enough into an abyss, the
+          abyss will gaze back into you.”
+        </li>
+        <li>
+          “Every deep thinker is more afraid of being understood than of being
+          misunderstood.”
+        </li>
+      </ul>
+    </section>
     <script>
-      let h2 = document.querySelector("#quote");
-      let typewriter = new Typewriter(h2, {
+      let h1 = document.querySelector("#quote");
+      let h3 = document.querySelector("h3");
+      let links = document.querySelector("#links");
+
+      h3.style.opacity = 0;
+
+      links.style.opacity = 0;
+
+      function showAuthor() {
+        h3.style.transition = "opacity 1s ease-in-out"; // Smooth transition
+        h3.style.opacity = 1; // Make the text visible
+      }
+
+      function showLinks() {
+        links.style.transition = "opacity 1s ease-in-out"; // Smooth transition
+        links.style.opacity = 1;
+      }
+
+      let typewriter = new Typewriter(h1, {
         autoStart: true,
         delay: 80,
         cursor: null,
@@ -103,7 +237,9 @@
         .typeString(
           "“And those who were seen dancing were thought to be insane by those who could not hear the music.”"
         )
-        .pauseFor(1000) // Pause at the end
+        .pauseFor(200) // Pause at the end
+        .callFunction(showAuthor)
+        .callFunction(showLinks)
         .start();
     </script>
   </body>
